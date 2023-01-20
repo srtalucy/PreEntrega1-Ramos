@@ -13,10 +13,11 @@ function App() {
       <NavBar />
 
       <Routes>
-      
-        <Route exact path='/productos' element={<ItemListContainer/>}>
+      <Route  path='/' element={<Home/>}/>
+      <Route  path='/Home' element={<Home/>}/>
+        <Route exact path='/Productos' element={<ItemListContainer/>}>
         </Route>
-        <Route exact path='/home' element={<Home/>}/>
+        
         <Route exact path='/Productos/:productosId' element={<ItemDetailContainer/>}/>
         </Routes>
         

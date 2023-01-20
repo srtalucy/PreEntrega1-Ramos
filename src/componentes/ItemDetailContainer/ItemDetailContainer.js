@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useParams} from 'react-router-dom'
+import { Link, useParams} from 'react-router-dom'
 //Estilos
 import './ItemDetailContainer.css'
 
@@ -30,6 +30,8 @@ const ItemDetailContainer = () => {//Funcion constructora
     return (
         <div className='ItemDetail-box'>
             <ItemDetail {...productos}/>
+            
+         
             </div>
             
       

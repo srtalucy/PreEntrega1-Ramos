@@ -1,0 +1,13 @@
+.titulo {
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif !important;
+     }
+     
+.main {
+        margin-top: 1em;
+        margin-bottom: 1em; 
+        min-height: 100%;
+        font-size: larger; }
+iframe {
+    width: 50vw;
+    height: 50vh;
+    margin-bottom: 0.7em; }
