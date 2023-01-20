@@ -13,19 +13,23 @@ import ItemDetail from '../ItemDetail/ItemDetail'
 ###############################################*/
 const ItemDetailContainer = () => {//Funcion constructora
 
-    const [productos, setProductos] = useState([])
+    const [productos, setProductos] = useState({})
 
-    const { productoId } = useParams()
-
+    const { productosId } = useParams()
+    
+    
+       const getProduct = (id) => {
+      fetch('/productos.json')
+      .then(response => response.json())
+      .then(productos => setProductos(productos.find(el => el.id === parseInt(id))))
+    }
    
       useEffect(() => {
-        fetch('/productos.json')
-          .then(response => response.json())
-          .then(productos => setProductos(<ItemDetail key={productos.id} id={'producto'+ productos.id} data={productos}/> ))
-      }, [productoId]);
+        getProduct(productosId);
+      }, [productosId]);
     return (
         <div className='ItemDetail-box'>
-            {productos}
+            <ItemDetail {...productos}/>
             </div>
             
       

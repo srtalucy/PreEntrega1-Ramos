@@ -3,9 +3,8 @@ import './ItemDetail.css';
 import Card from 'react-bootstrap/Card'
 
 
-const ItemDetail = (props) => {//Funcion constructora
+const ItemDetail = ({id, nombre, precio}) => {//Funcion constructora
 
-    const {id, nombre, precio}=props.data
    
     return (
 
