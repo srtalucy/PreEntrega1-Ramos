@@ -1,10 +1,10 @@
 
    [
         {
-            "id":1, "nombre":"Young Forever", "precio":41.30, "imagen":".images/youngforever.jpg"
+            "id":1, "nombre":"Young Forever", "precio":41.30, "imagen":"./images/youngforever.jpg"
         },
         {
-            "id":2, "nombre":"Love Yourself: Answer", "precio":41.99, "imagen":".images/loveyourself.jpg"
+            "id":2, "nombre":"Love Yourself: Answer", "precio":41.99, "imagen":"./images/loveyourself.jpg"
         },
         {
             "id":3, "nombre":"Proof", "precio":69.17, "imagen": "./images/proof.jpg"

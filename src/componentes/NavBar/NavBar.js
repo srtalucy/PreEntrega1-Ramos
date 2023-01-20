@@ -9,7 +9,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
-
+import { Link } from 'react-router-dom';
 import MenuItem from '@mui/material/MenuItem';
 import '../NavBar/NavBar.css';
 import CartWidget from '../CartWidget/CartWidget'
@@ -117,18 +117,19 @@ function ResponsiveAppBar() {
           >
            bts army
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'center' }}>
+          <Box  className='box'sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'center' }}>
             {pages.map((page) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 3, color: 'white', display: 'block' }}
               >
-                {page}
+                <Link to={page}>{page}</Link>
               </Button>
             ))}
+            
           </Box>
-          <CartWidget/>
+        <CartWidget/>
           <Box sx={{ flexGrow: 0 }}>
            
             

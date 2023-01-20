@@ -2,22 +2,27 @@
 import './App.css';
 import NavBar from './componentes/NavBar/NavBar';
 import ItemListContainer from './componentes/ItemListContainer/ItemListContainer';
-import Items from './componentes/Items/Items';
-import data from '/productos.json'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'; 
+import Home from './componentes/Home/Home'
+import ItemDetailContainer from './componentes/ItemDetailContainer/ItemDetailContainer';
 function App() {
   return (
     <div className='App'>
+      <BrowserRouter>
+
       <NavBar />
-      <ItemListContainer>
 
-        {data.map((p)=>
-          <Items key={p.id} nombre={p.nombre} precio={p.precio}/>
-         
-        )};
-
-
+      <Routes>
+      
+        <Route exact path='/productos' element={<ItemListContainer/>}>
+        </Route>
+        <Route exact path='/home' element={<Home/>}/>
+        <Route exact path='/Productos/:productosId' element={<ItemDetailContainer/>}/>
+        </Routes>
         
-      </ItemListContainer>
+      
+      </BrowserRouter>
+     
       
     </div>
   );

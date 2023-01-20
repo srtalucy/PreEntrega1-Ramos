@@ -1,29 +1,21 @@
-import React, { useEffect, useState } from "react";
-import '../Items/Items.css';
-import AddCartBtn from "../AddCartBtn/AddCartBtn";
+import './Items.css';
+import AddCartBtn from '../AddCartBtn/AddCartBtn';
+import { Link } from 'react-router-dom';
 
-
-
-function Items(props){
-   
-
-   
-   return (
-        
-         <div className="col-8 mb-2 col-md-4 text-center mt-4 mx-4">
-            <div className="card" id={props.id}> 
-                <img src={props.imagen} alt='' className="img-top d-flex align-self-center"/>
-                <div className="card-body"> 
-                    <h5>{props.nombre}</h5>
-                    <span className="d-flex text-center justify-content-center">€<p>{props.precio}</p></span>
-                    <AddCartBtn/>
-                    </div>
-             </div>
+const Items = (props)=>{
+  const {id, nombre, precio, imagen}=props.data
+    return (
+        <div className="col-8 mb-2 col-md-4 text-center mt-4 mx-4 box">
+          
+            <div className="card" key={id}>
+              <img src={imagen} alt='' className="img-top d-flex align-self-center"/>
+              <h5>{nombre}</h5>
+              <span className="d-flex text-center justify-content-center">€<p>{precio}</p></span>
+              <AddCartBtn/>
+              <button className='btn btn-secondary detail'><Link to={`/Productos/${id}`}> Ver Detalle del Producto </Link></button>
+            </div>
         </div>
-   )
+      );
 }
 
-export default  Items;
- 
-       
-
+export default Items;
