@@ -5,6 +5,7 @@ import ItemListContainer from './componentes/ItemListContainer/ItemListContainer
 import { BrowserRouter, Routes, Route } from 'react-router-dom'; 
 import Home from './componentes/Home/Home'
 import ItemDetailContainer from './componentes/ItemDetailContainer/ItemDetailContainer';
+import Footer from './componentes/Footer/Footer';
 function App() {
   return (
     <div className='App'>
@@ -21,7 +22,7 @@ function App() {
         <Route exact path='/Productos/:productosId' element={<ItemDetailContainer/>}/>
         </Routes>
         
-      
+      <Footer />
       </BrowserRouter>
      
       
