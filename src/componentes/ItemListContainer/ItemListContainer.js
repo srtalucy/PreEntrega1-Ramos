@@ -7,7 +7,7 @@ import ItemList from "../ItemList/ItemList";
 const ItemListContainer = () => {
  
 return(
-  <div>
+  <div className='productos_container'>
     <ItemList/>
   </div>
 )

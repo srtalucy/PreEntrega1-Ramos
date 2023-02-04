@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Items = (props)=>{
   const {id, nombre, precio, imagen}=props.data
     return (
-        <div className="col-8 mb-2 col-md-4 text-center mt-4 mx-4 box">
+        <div className=" col-md-3 text-center mt-4 cardContainer">
           
             <div className="card" key={id}>
               <img src={imagen} alt='' className="img-top d-flex align-self-center"/>

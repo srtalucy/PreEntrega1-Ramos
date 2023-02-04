@@ -12,7 +12,7 @@ const ItemList = ()=>{
   }, []);
   const ItemsHTML = items.map(i =><Items key= {i.id} data={i}/>)
   return(
-    <div>
+    <div className='col-12 containerProductos'>
         {ItemsHTML}
     </div>
   )
